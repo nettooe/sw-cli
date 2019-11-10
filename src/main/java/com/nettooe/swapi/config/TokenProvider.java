@@ -24,8 +24,9 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
 public class TokenProvider implements Serializable {
+	private static final long serialVersionUID = -6366644682374824582L;
 
-    public String getUsernameFromToken(String token) {
+	public String getUsernameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
     }
 

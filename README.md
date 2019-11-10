@@ -14,4 +14,4 @@ $ ./mvnw clean install spring-boot:run
 
 Em seguida, acesse:
 
-http://localhost:8080/personagens
+http://localhost:8080/swagger-ui.html

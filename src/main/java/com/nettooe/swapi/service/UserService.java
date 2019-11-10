@@ -2,12 +2,12 @@ package com.nettooe.swapi.service;
 
 import java.util.List;
 
+import com.nettooe.swapi.model.LoginUser;
 import com.nettooe.swapi.model.User;
-import com.nettooe.swapi.model.UserDto;
 
 public interface UserService {
 
-	User save(UserDto user);
+	User save(LoginUser user);
 
 	List<User> findAll();
 
