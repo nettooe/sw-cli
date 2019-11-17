@@ -7,5 +7,5 @@ import com.nettooe.swapi.model.User;
 
 @Repository
 public interface UserDao extends CrudRepository<User, Long> {
-    User findByUsername(String username);
+	User findByUsername(String username);
 }

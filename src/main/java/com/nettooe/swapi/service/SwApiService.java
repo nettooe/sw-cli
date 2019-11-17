@@ -85,13 +85,11 @@ public class SwApiService {
 			humanosDTO.getPersonagens().add(convertPersonToPersonagemDto(apiRepository.obterPersonagemPorUri(h)));
 		});
 
-		// Using Collectors.summarizingDouble()
-		DoubleSummaryStatistics doubleSummaryStatistics = humanosDTO.getPersonagens().stream()
+		DoubleSummaryStatistics estatisticas = humanosDTO.getPersonagens().stream()
 				.collect(Collectors.summarizingDouble(PersonagemDTO::getMassa));
 
-		humanosDTO.setPesoMedio(doubleSummaryStatistics.getAverage());
+		humanosDTO.setPesoMedio(estatisticas.getAverage());
 
-		// TODO Auto-generated method stub
 		return humanosDTO;
 	}
 

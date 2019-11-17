@@ -57,4 +57,11 @@ public class PersonagemDTO {
 		this.filmes = filmes;
 	}
 
+	@Override
+	public String toString() {
+		return "PersonagemDTO [uri=" + uri + ", nome=" + nome + ", anoNascimento=" + anoNascimento + ", massa=" + massa
+				+ ", filmes=" + filmes + "]";
+	}
+
+	
 }

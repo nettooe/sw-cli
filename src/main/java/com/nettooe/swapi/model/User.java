@@ -6,22 +6,24 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "USER")
+@Table(name = "user")
 public class User {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
+    
     @Column
     private String username;
+    
     @Column
     @JsonIgnore
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "USER_ROLES", joinColumns = {
-            @JoinColumn(name = "USER_ID") }, inverseJoinColumns = {
-            @JoinColumn(name = "ROLE_ID") })
+    @JoinTable(name = "user_roles", joinColumns = {
+            @JoinColumn(name = "user_id") }, inverseJoinColumns = {
+            @JoinColumn(name = "role_id") })
     private Set<Role> roles;
 
     public long getId() {
